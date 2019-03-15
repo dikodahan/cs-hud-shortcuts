@@ -27,10 +27,10 @@ fi
 #####################################################################
 # Vars
 
-GITLABPROJECT="Kite-Circuit-Boards-RPi-Menu-Shurtcuts"
-GITLABURL="https://github.com/dikodahan/$GITLABPROJECT"
+GITHUBPROJECT="Kite-Circuit-Boards-RPi-Menu-Shurtcuts"
+GITHUBURL="https://github.com/dikodahan/$GITHUBPROJECT"
 PIHOMEDIR="/home/pi"
-BINDIR="$PIHOMEDIR/$GITLABPROJECT"
+BINDIR="$PIHOMEDIR/$GITHUBPROJECT"
 USER="pi"
 
 #####################################################################
@@ -38,10 +38,10 @@ USER="pi"
 echo "INSTALLING.."
 
 # Checkout code if not already done so
-if ! exists "$BINDIR/LICENSE" ; then
-    execute "git clone --recursive --depth 1 --branch $BRANCH $GITLABURL $BINDIR"
+if [ ! -f "$BINDIR/LICENSE" ; then
+    "git clone --recursive --depth 1 --branch master $GITHUBURL $BINDIR"
 fi
-execute "chown -R $USER:$USER $BINDIR"
+"chown -R $USER:$USER $BINDIR"
 
 # Set up Battery Indicator script and icon in RetroPie
 if ! exists "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ; then
