@@ -12,4 +12,16 @@ Example of the HUD Update configuration menu item:
 Example of the Battery Monitor configuration menu item:
 ![Battery Menu](https://github.com/dikodahan/Kite-Circuit-Boards-RPi-Menu-Shurtcuts/blob/master/images/Battery-Demo.jpeg "Battery Menu on a Circuit-Gem")
 
+## Running the installer
+
+* SSH into your Circuit board.
+* git clone https://github.com/dikodahan/cs-hud-shortcuts.git
+* cd cs-hud-shortcuts
+* chmod +x setup.sh
+* sudo ./setup.sh
+* once done you will need to reboot your device for the changes to take effect.
+* sudo reboot
+
+## Credits
+
 - Installer script originally built by [Kite](https://github.com/kiteretro) for the Circuit Sword but has been re-purposed to install the menu shurtcuts in RetroPie.
