@@ -15,12 +15,12 @@ Example of the Battery Monitor configuration menu item:
 ## Running the installer
 
 * SSH into your Circuit board.
-* git clone https://github.com/dikodahan/cs-hud-shortcuts.git
-* cd cs-hud-shortcuts
-* chmod +x setup.sh
-* sudo ./setup.sh
+* `git clone https://github.com/dikodahan/cs-hud-shortcuts.git`
+* `cd cs-hud-shortcuts`
+* `chmod +x setup.sh`
+* `sudo ./setup.sh`
 * once done you will need to reboot your device for the changes to take effect.
-* sudo reboot
+* `sudo reboot`
 
 ## Credits
 
