@@ -1,4 +1,4 @@
-# RetroPie Menu Shurtcuts for Kite's Circuit Board
+# RetroPie Menu Shortcuts for Kite's Circuit Board
 
 In case you are not familiar with these projects, please visit www.sudomod.com. The AIO (All In One) boards for GameBoy and VMu also come with an excellent HUD software provided by [Kite](https://github.com/kiteretro). There are two functions that require manual intervention in his HUD:
 * Enabling/disabling the on-screen baterry monitor.
