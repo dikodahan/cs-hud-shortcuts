@@ -27,7 +27,7 @@ fi
 #####################################################################
 # Vars
 
-GITHUBPROJECT="Kite-Circuit-Boards-RPi-Menu-Shurtcuts"
+GITHUBPROJECT="cs-hud-shortcuts"
 GITHUBURL="https://github.com/dikodahan/$GITHUBPROJECT"
 PIHOMEDIR="/home/pi"
 BINDIR="$PIHOMEDIR/$GITHUBPROJECT"
