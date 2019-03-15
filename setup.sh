@@ -38,19 +38,20 @@ USER="pi"
 echo "INSTALLING.."
 
 # Checkout code if not already done so
-if [ ! -f "$BINDIR/LICENSE" ; then
-    "git clone --recursive --depth 1 --branch master $GITHUBURL $BINDIR"
+if [ ! -f "$BINDIR/LICENSE" ]; then
+    git clone --recursive --depth 1 --branch master $GITHUBURL $BINDIR
 fi
-"chown -R $USER:$USER $BINDIR"
+chown -R $USER:$USER $BINDIR
 
 # Set up Battery Indicator script and icon in RetroPie
-if ! exists "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ; then
-    echo "Copying battery indicator script:"
-    execute "cp $BINDIR/scripts/battery.sh $PIHOMEDIR/RetroPie/retropiemenu"
-    echo "Copying battery icon:"
-    execute "cp $BINDIR/images/battery.png $PIHOMEDIR/RetroPie/retropiemenu/icons"
+if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ]; then
+    echo "Copying battery indicator script"
+    cp $BINDIR/scripts/battery.sh $PIHOMEDIR/RetroPie/retropiemenu
+    chmod u+x $PIHOMEDIR/RetroPie/retropiemenu/battery.sh
+    echo "Copying battery icon"
+    cp $BINDIR/images/battery.png $PIHOMEDIR/RetroPie/retropiemenu/icons
     if grep -Fxq "battery.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml; then
-      echo "Adding battery indicator menu item to RetroPie:"
+      echo "Adding battery indicator menu item to RetroPie"
       batterysection=$(
             cat <<_END_
     <game>
@@ -61,18 +62,19 @@ if ! exists "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ; then
     </game>
 _END_
         )
-      execute "sed -i "/\<\/gameList\>\n/a ${batterysection}" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml"
+      sed -i "/\<\/gameList\>\n/a ${batterysection}" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
     fi
 fi
 
 # Set up Kite's HUD Update script and icon in RetroPie
-if ! exists "$PIHOMEDIR/RetroPie/retromenu/kite-update.sh" ; then
-    echo "Copying HUD Update script:"
-    execute "cp $BINDIR/scripts/kite-update.sh $PIHOMEDIR/RetroPie/retropiemenu"
-    echo "Copying HUD Update icon:"
-    execute "cp $BINDIR/images/kite.png $PIHOMEDIR/RetroPie/retropiemenu/icons"
+if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/kite-update.sh" ]; then
+    echo "Copying HUD Update script"
+    cp $BINDIR/scripts/kite-update.sh $PIHOMEDIR/RetroPie/retropiemenu
+    chmod u+x $PIHOMEDIR/RetroPie/retropiemenu/kite-update.sh
+    echo "Copying HUD Update icon"
+    cp $BINDIR/images/kite.png $PIHOMEDIR/RetroPie/retropiemenu/icons
     if grep -Fxq "kite-update.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml; then
-      echo "Adding Kite's HUD update menu item to RetroPie:"
+      echo "Adding Kite's HUD update menu item to RetroPie"
       hudupdatesection=$(
             cat <<_END_
     <game>
@@ -83,11 +85,12 @@ if ! exists "$PIHOMEDIR/RetroPie/retromenu/kite-update.sh" ; then
     </game>
 _END_
         )
-      execute "sed -i "/\<\/gameList\>\n/a ${hudupdatesection}" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml"
+      sed -i "/\<\/gameList\>\n/a ${hudupdatesection}" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
     fi
 fi
 
 #####################################################################
 # DONE
+echo " "
 echo "DONE!"
 echo "You need to reboot your device in order for these changes to take effect."
