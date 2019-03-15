@@ -52,17 +52,12 @@ if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ]; then
     cp $BINDIR/images/battery.png $PIHOMEDIR/RetroPie/retropiemenu/icons
     if grep -Fxq "battery.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml; then
       echo "Adding battery indicator menu item to RetroPie"
-      batterysection=$(
-            cat <<_END_
-    <game>
-	    <path>./battery.sh</path>
-	    <name>Battery Indicator</name>
-	    <desc>Turns the battery indicator ON and OFF in Kite's HUD software.</desc>
-	    <image>./icons/battery.png</image>
-    </game>
-_END_
-        )
-      sed -i "/\<\/gameList\>\n/a ${batterysection}" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\        <game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <path\>.\/battery.sh\<\/path\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <name\>Battery Indicator\<\/name\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <desc\>Turns ON and OFF the battery indicator in Kite\'s HUD software.\<\/desc\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <image\>.\/icons\/battery.png\<\/image\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\        <\/game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
     fi
 fi
 
@@ -75,17 +70,12 @@ if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/kite-update.sh" ]; then
     cp $BINDIR/images/kite.png $PIHOMEDIR/RetroPie/retropiemenu/icons
     if grep -Fxq "kite-update.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml; then
       echo "Adding Kite's HUD update menu item to RetroPie"
-      hudupdatesection=$(
-            cat <<_END_
-    <game>
-        <path>./kite-update.sh</path>
-        <name>Kite HUD Update</name>
-        <desc>Installs available updates to Kite's HUD software.</desc>
-        <image>./icons/kite.png</image>
-    </game>
-_END_
-        )
-      sed -i "/\<\/gameList\>\n/a ${hudupdatesection}" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\        <game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <path\>.\/kite-update.sh\<\/path\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <name\>Kite HUD Update\<\/name\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <desc\>Installs available updates to Kite\'s HUD software.\<\/desc\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <image\>.\/icons\/kite.png\<\/image\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\        <\/game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
     fi
 fi
 
