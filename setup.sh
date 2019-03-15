@@ -47,7 +47,7 @@ chown -R $USER:$USER $BINDIR
 if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ]; then
     echo "Copying battery indicator script"
     cp $BINDIR/scripts/battery.sh $PIHOMEDIR/RetroPie/retropiemenu
-    chmod u+x $PIHOMEDIR/RetroPie/retropiemenu/battery.sh
+    chmod +x $PIHOMEDIR/RetroPie/retropiemenu/battery.sh
     echo "Copying battery icon"
     cp $BINDIR/images/battery.png $PIHOMEDIR/RetroPie/retropiemenu/icons
     if grep -Fxq "battery.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml; then
@@ -70,7 +70,7 @@ fi
 if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/kite-update.sh" ]; then
     echo "Copying HUD Update script"
     cp $BINDIR/scripts/kite-update.sh $PIHOMEDIR/RetroPie/retropiemenu
-    chmod u+x $PIHOMEDIR/RetroPie/retropiemenu/kite-update.sh
+    chmod +x $PIHOMEDIR/RetroPie/retropiemenu/kite-update.sh
     echo "Copying HUD Update icon"
     cp $BINDIR/images/kite.png $PIHOMEDIR/RetroPie/retropiemenu/icons
     if grep -Fxq "kite-update.sh" /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml; then
