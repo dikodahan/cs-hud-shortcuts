@@ -8,9 +8,11 @@ This setup script will update your image and add two RetroPie menu shortcuts to 
 
 Example of the HUD Update configuration menu item:
 ![Update Menu](https://github.com/dikodahan/Kite-Circuit-Boards-RPi-Menu-Shurtcuts/blob/master/images/Update-Demo.jpeg "Update Menu on a Circuit-Gem")
+For reference info please go to: https://www.sudomod.com/forum/viewtopic.php?f=51&t=7613
 
 Example of the Battery Monitor configuration menu item:
 ![Battery Menu](https://github.com/dikodahan/Kite-Circuit-Boards-RPi-Menu-Shurtcuts/blob/master/images/Battery-Demo.jpeg "Battery Menu on a Circuit-Gem")
+For reference info please go to: https://www.sudomod.com/forum/viewtopic.php?f=51&t=7622
 
 ## Running the installer
 
