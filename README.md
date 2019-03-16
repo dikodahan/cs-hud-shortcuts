@@ -21,8 +21,8 @@ For reference info please go to: https://www.sudomod.com/forum/viewtopic.php?f=5
 * `cd cs-hud-shortcuts`
 * `chmod +x setup.sh`
 * `sudo ./setup.sh`
-* once done you will need to reboot your device for the changes to take effect.
-* `sudo reboot`
+* once done you will be prompt with a question to reboot your device for the changes to take effect.
+* Press `y` if you'd like to reboot immediately or `n` if you'd like to do it later.
 
 ## Credits
 
