@@ -55,7 +55,7 @@ if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/battery.sh" ]; then
       sed -i '$ i\        <game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\                <path\>.\/battery.sh\<\/path\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\                <name\>Battery Indicator\<\/name\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
-      sed -i '$ i\                <desc\>Turns ON and OFF the battery indicator in Kite\'s HUD software.\<\/desc\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <desc\>Turns ON and OFF the battery indicator in Kite HUD software.\<\/desc\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\                <image\>.\/icons\/battery.png\<\/image\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\        <\/game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
     fi
@@ -73,7 +73,7 @@ if [ ! -f "$PIHOMEDIR/RetroPie/retromenu/kite-update.sh" ]; then
       sed -i '$ i\        <game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\                <path\>.\/kite-update.sh\<\/path\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\                <name\>Kite HUD Update\<\/name\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
-      sed -i '$ i\                <desc\>Installs available updates to Kite\'s HUD software.\<\/desc\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
+      sed -i '$ i\                <desc\>Installs available updates to Kite HUD software.\<\/desc\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\                <image\>.\/icons\/kite.png\<\/image\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
       sed -i '$ i\        <\/game\>' /opt/retropie/configs/all/emulationstation/gamelists/retropie/gamelist.xml
     fi
