@@ -81,6 +81,6 @@ fi
 
 #####################################################################
 # DONE
-echo " "
+echo ""
 echo "DONE!"
 echo "You need to reboot your device in order for these changes to take effect."
