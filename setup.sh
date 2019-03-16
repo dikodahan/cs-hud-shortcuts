@@ -83,4 +83,12 @@ fi
 # DONE
 echo ""
 echo "DONE!"
-echo "You need to reboot your device in order for these changes to take effect."
+read -p "Would you like to reboot the system now for the changes to take effect? " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+  echo "Rebooting..."
+  sleep 3s
+  reboot
+else
+  echo "These changes will take effect next time you reboot your device."
+fi
