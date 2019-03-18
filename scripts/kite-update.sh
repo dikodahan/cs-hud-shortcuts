@@ -1,4 +1,5 @@
 #!/bin/bash
+# This code runs the update software for Circuit board depending on the board you have.
 
 if [[ -d "${HOME}/Circuit-Gem" ]]; then
   cd ~/Circuit-Gem
