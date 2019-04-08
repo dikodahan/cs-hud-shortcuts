@@ -16,9 +16,9 @@ elif [[ -d "${HOME}/Circuit-Sword" ]]; then
   fi
 elif [[ -d "${HOME}/Circuit-Sword-Lite" ]]; then
   if grep -q "ExecStart=/home/pi/Circuit-Sword-Lite/cs-hud/cs-hud -s" "/lib/systemd/system/cs-hud.service"; then
-    sudo sed -i 's/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud -s/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud/g' /lib/systemd/system/cs-hud.ser$
+    sudo sed -i 's/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud -s/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud/g' /lib/systemd/system/cs-hud.service
   else
-    sudo sed -i 's/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud -s/g' /lib/systemd/system/cs-hud.ser$
+    sudo sed -i 's/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud/ExecStart=\/home\/pi\/Circuit-Sword-Lite\/cs-hud\/cs-hud -s/g' /lib/systemd/system/cs-hud.service
   fi
 else
   echo "It seems like Kite's CS-HUD software is not installed on your device :("
